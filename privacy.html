@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Mr. G's Cycling Fuel Timer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #1D4ED8;
+      --blue-dark:  #1E3A8A;
+      --blue-light: #DBEAFE;
+      --blue-mid:   #3B82F6;
+      --slate:      #1E293B;
+      --slate-mid:  #475569;
+      --slate-light:#94A3B8;
+      --cream:      #F8F7F4;
+      --white:      #FFFFFF;
+      --rule:       #E2E8F0;
+      --accent:     #EF4444;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--slate);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ─────────────────────────────────────────────── */
+    header {
+      background: var(--blue-dark);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 110% 40%, rgba(59,130,246,0.35) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at -10% 80%, rgba(29,78,216,0.4) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 32px 52px;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 6px 16px 6px 8px;
+      margin-bottom: 28px;
+      backdrop-filter: blur(8px);
+    }
+
+    .app-badge .icon {
+      width: 28px;
+      height: 28px;
+      background: var(--blue-mid);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .app-badge span {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.02em;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: #93C5FD;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .meta-pill {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #60A5FA;
+      flex-shrink: 0;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────────────── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    /* ── TOC ────────────────────────────────────────────────── */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    @media (max-width: 520px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+
+    .toc li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--blue-mid);
+      flex-shrink: 0;
+      width: 22px;
+    }
+
+    .toc a {
+      font-size: 14px;
+      color: var(--slate-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--blue); }
+
+    /* ── SECTIONS ───────────────────────────────────────────── */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 24px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--slate);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    section p {
+      color: var(--slate-mid);
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul {
+      list-style: none;
+      margin: 14px 0;
+    }
+
+    section ul li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--slate-mid);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue-mid);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 52px 0;
+    }
+
+    /* ── HIGHLIGHT BOXES ────────────────────────────────────── */
+    .highlight-box {
+      background: var(--blue-light);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      color: var(--blue-dark) !important;
+      font-size: 14px !important;
+      margin-bottom: 6px !important;
+    }
+
+    .highlight-box p:last-child { margin-bottom: 0 !important; }
+
+    .highlight-box strong {
+      color: var(--blue-dark);
+      font-weight: 500;
+    }
+
+    .warning-box {
+      background: #FEF3C7;
+      border-left: 4px solid #F59E0B;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .warning-box p {
+      color: #78350F !important;
+      font-size: 14px !important;
+      margin-bottom: 6px !important;
+    }
+
+    .warning-box p strong {
+      color: #78350F;
+    }
+
+    /* ── CONTACT CARD ───────────────────────────────────────── */
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-card .label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .contact-card p {
+      color: var(--slate-mid);
+      font-size: 14px;
+      margin: 0 !important;
+    }
+
+    .contact-card a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--slate);
+      padding: 32px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--slate-light);
+      line-height: 1.6;
+    }
+
+    footer strong {
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .header-inner { padding: 48px 24px 40px; }
+      main { padding: 40px 24px 64px; }
+      .toc { padding: 22px 20px; }
+      .contact-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="app-badge">
+        <div class="icon">🚴</div>
+        <span>Mr. G's Cycling Fuel Timer</span>
+      </div>
+      <h1>Privacy <em>Policy</em></h1>
+      <div class="header-meta">
+        <span class="meta-pill">Effective date: [INSERT DATE]</span>
+        <span class="meta-pill">Last updated: [INSERT DATE]</span>
+        <span class="meta-pill">iOS &amp; Android</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="toc">
+      <p class="toc-label">Contents</p>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#data-collected">Data We Collect</a></li>
+        <li><a href="#data-not-collected">Data We Do Not Collect</a></li>
+        <li><a href="#local-storage">Local Storage</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#third-parties">Third Parties</a></li>
+        <li><a href="#minors">Age Restriction</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. OVERVIEW -->
+    <section id="overview">
+      <h2><span class="section-num">01</span> Overview</h2>
+      <p>Mr. G's Cycling Fuel Timer ("the app", "we", "our") is a mobile application available on iOS and Android, built as a community service for long-distance cyclists. This privacy policy explains what information the app does and does not collect, how data is handled, and your rights as a user.</p>
+      <p>This app was built to help cyclists manage nutrition and hydration timing during rides. It does not require an account, does not connect to any server, and does not transmit any data off your device.</p>
+      <div class="highlight-box">
+        <p><strong>Plain English summary:</strong> This app stores your schedules and ride history on your device only. Nothing is sent to us or any third party. We do not know who you are, where you are, or how you use the app.</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- 2. DATA WE COLLECT -->
+    <section id="data-collected">
+      <h2><span class="section-num">02</span> Data We Collect</h2>
+      <p>We collect no personal data whatsoever. The app does not ask for your name, email address, location, or any identifying information at any point.</p>
+      <p>The only data that exists within the app is data you create yourself — your fueling schedules and session history — and this data remains entirely on your device. It is never transmitted, uploaded, or shared.</p>
+    </section>
+
+    <hr />
+
+    <!-- 3. DATA WE DO NOT COLLECT -->
+    <section id="data-not-collected">
+      <h2><span class="section-num">03</span> Data We Do Not Collect</h2>
+      <p>To be explicit, the app does not collect or transmit any of the following:</p>
+      <ul>
+        <li>Name, email address, or any contact information</li>
+        <li>Location data or GPS coordinates</li>
+        <li>Device identifiers or advertising IDs</li>
+        <li>Usage analytics or crash reports</li>
+        <li>Biometric data or health information</li>
+        <li>Financial information or payment details</li>
+        <li>Photos, contacts, or files from your device</li>
+        <li>IP address or network information</li>
+        <li>Any data from connected wearables, headphones, or Bluetooth devices</li>
+      </ul>
+      <p>The app does not use any third-party analytics frameworks, advertising SDKs, or tracking libraries.</p>
+    </section>
+
+    <hr />
+
+    <!-- 4. LOCAL STORAGE -->
+    <section id="local-storage">
+      <h2><span class="section-num">04</span> Local Storage</h2>
+      <p>The app stores the following data locally on your device using your device's built-in storage:</p>
+      <ul>
+        <li><strong>Fueling schedules</strong> — the schedule names and event lists you create</li>
+        <li><strong>Session history</strong> — a log of completed and missed events from past rides</li>
+        <li><strong>App settings</strong> — any in-app preferences you configure</li>
+      </ul>
+      <p>This data is stored on your device only and is never backed up to any server operated by us. If you delete the app, all locally stored data is permanently removed from your device.</p>
+      <p>On iOS, data may be included in your device's iCloud or iTunes backup if you have those services enabled. This is governed by Apple's privacy policy, not ours. On Android, data may be included in Google's device backup service if enabled. This is governed by Google's privacy policy.</p>
+    </section>
+
+    <hr />
+
+    <!-- 5. NOTIFICATIONS -->
+    <section id="notifications">
+      <h2><span class="section-num">05</span> Notifications</h2>
+      <p>The app uses local notifications to alert you when fueling events are due during an active session. These notifications are generated and delivered entirely on your device — no notification content is sent to or processed by any external server.</p>
+      <p>Notifications may be delivered to:</p>
+      <ul>
+        <li>Your iPhone or Android device screen</li>
+        <li>Connected headphones or earbuds (audio alerts)</li>
+        <li>Apple Watch (via iOS notification forwarding)</li>
+        <li>Compatible Android wearable devices</li>
+      </ul>
+      <p>No data is transmitted to any server as part of this notification process. You can disable notifications at any time in your device's system settings.</p>
+    </section>
+
+    <hr />
+
+    <!-- 6. THIRD PARTIES -->
+    <section id="third-parties">
+      <h2><span class="section-num">06</span> Third Parties</h2>
+      <p>We do not share any data with third parties because we do not collect any data to share.</p>
+      <p>The app does not contain advertisements and does not use any advertising networks. The app does not integrate with social media platforms, analytics services, or any external APIs.</p>
+      <p>The app is distributed through the Apple App Store and Google Play Store. Those platforms may collect standard device and transaction information as part of the download and payment process. This is governed by Apple's and Google's respective privacy policies.</p>
+    </section>
+
+    <hr />
+
+    <!-- 7. MINORS -->
+    <section id="minors">
+      <h2><span class="section-num">07</span> Age Restriction</h2>
+      <div class="warning-box">
+        <p><strong>This app is intended for adults aged 18 and over.</strong></p>
+        <p>Mr. G's Cycling Fuel Timer is not designed for, directed at, or intended to be used by minors under the age of 18. By downloading and using this app, you confirm that you are 18 years of age or older.</p>
+      </div>
+      <p>We do not knowingly collect any information from anyone under the age of 18. If you are a parent or guardian and believe your child has downloaded or used this app, please contact us using the details in the Contact section below and we will take appropriate action.</p>
+      <p>If you are under 18, you are not permitted to use this app. Please delete it from your device.</p>
+    </section>
+
+    <hr />
+
+    <!-- 8. CHANGES -->
+    <section id="changes">
+      <h2><span class="section-num">08</span> Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the app after any changes constitutes your acceptance of the updated policy.</p>
+      <p>Given that the app collects no personal data, changes to this policy are expected to be infrequent and minor.</p>
+    </section>
+
+    <hr />
+
+    <!-- 9. CONTACT -->
+    <section id="contact">
+      <h2><span class="section-num">09</span> Contact</h2>
+      <p>If you have any questions about this privacy policy or the app, please contact us:</p>
+      <div class="contact-card">
+        <div>
+          <p class="label">App</p>
+          <p>Mr. G's Cycling Fuel Timer</p>
+        </div>
+        <div>
+          <p class="label">Developer</p>
+          <p>[Your Name]</p>
+        </div>
+        <div>
+          <p class="label">Email</p>
+          <p><a href="mailto:[your@email.com]">[your@email.com]</a></p>
+        </div>
+        <div>
+          <p class="label">Website</p>
+          <p><a href="[your GitHub Pages URL]">[your GitHub Pages URL]</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Mr. G's Cycling Fuel Timer</strong></p>
+    <p>This app is intended for adults aged 18 and over &nbsp;·&nbsp; Not for medical use &nbsp;·&nbsp; iOS &amp; Android</p>
+  </footer>
+
+</body>
+</html>
